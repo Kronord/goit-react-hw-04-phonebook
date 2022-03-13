@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import s from './ContactForm.module.css';
+import propTypes from 'prop-types';
 
 export const ContactForm = ({ change }) => {
   const [name, setName] = useState('');
@@ -67,4 +68,8 @@ export const ContactForm = ({ change }) => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  change: propTypes.func.isRequired,
 };
